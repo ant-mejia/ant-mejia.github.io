@@ -1,51 +1,62 @@
 import React from 'react';
+import axios from 'axios';
 import {AreaChart, Area, ResponsiveContainer, Tooltip} from 'recharts';
 
 class Skills extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      stats: {},
+      repos: []
+    };
+  }
+  componentDidMount() {
+    this.getSkillCommits();
+  }
+
+  getSkillCommits = () => {
+    let repos = this.state.repos,
+      stats = this.state.stats,
+      list = [];
+    axios.get('https://api.github.com/users/ant-mejia/repos').then((data) => {
+      data.data.map((item) => {
+        if (!item.fork) {
+          repos.push(item.languages_url)
+        }
+      });
+    }).then(() => {
+      repos.forEach((item) => {
+        axios.get(item).then((data) => {
+          data = data.data;
+          Object.keys(data).map((key) => {
+            if (isNaN(data[key]) || data[key] === null) {
+              data[key] = 0;
+            }
+            if (stats[key] === undefined) {
+              stats[key] = {
+                name: key,
+                rp: 0
+              }
+            }
+            stats[key].rp += data[key];
+          });
+        });
+      });
+    });
+
+    this.setState({repos, stats});
+  }
+
+  getLanguage = (url) => {
+    return axios.get(url)
+  }
 
   render() {
-    const data = [
-      {
-        name: 'Page A',
-        uv: 4000,
-        pv: 2400,
-        amt: 2400
-      }, {
-        name: 'Page B',
-        uv: 3000,
-        pv: 1398,
-        amt: 2210
-      }, {
-        name: 'Page C',
-        uv: 2000,
-        pv: 9800,
-        amt: 2290
-      }, {
-        name: 'Page D',
-        uv: 2780,
-        pv: 3908,
-        amt: 2000
-      }, {
-        name: 'Page E',
-        uv: 1890,
-        pv: 4800,
-        amt: 2181
-      }, {
-        name: 'Page F',
-        uv: 2390,
-        pv: 3800,
-        amt: 2500
-      }, {
-        name: 'Page G',
-        uv: 3490,
-        pv: 4300,
-        amt: 2100
-      }
-    ];
+    const data = [this.state.stats];
     return (
-      <section id="skills" className="uk-padding-large">
-        <h1>Skills</h1>
-        <ResponsiveContainer width="100%" minHeight={280}>
+      <section id="skills" className="uk-padding-large" data-uk-height-viewport>
+        <h1 className="uk-text-center uk-text-left@m section-title">Skills</h1>
+        <ResponsiveContainer width="100%" minHeight={280} maxHeight={400}>
           <AreaChart data={data} margin={{
             top: 10,
             right: 30,
@@ -53,7 +64,8 @@ class Skills extends React.Component {
             bottom: 0
           }}>
             <Tooltip cursor={false}/>
-            <Area type='monotone' dataKey='uv' stroke='transparent' fill='#3b8bde'/>
+            <Area type='monotone' dataKey='rp' stroke="transparent" fill='#3067f2'/>
+            <Area type='monotone' dataKey='pv' stroke="transparent" fill='#1686d6'/>
           </AreaChart>
         </ResponsiveContainer>
         {Object.keys(this.props.skills).map((key) => {

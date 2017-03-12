@@ -15,10 +15,10 @@ class Header extends React.Component {
     });
   }
 
-  //data-uk-sticky="show-on-up: true; animation: uk-animation-slide-top; bottom: #bottom"
+  //data-uk-scrollspy-nav="overflow: false; cls: uk-animation-fade uk-active;closest: li; scroll: true; offset: 60"
   render() {
     return (
-      <header data-uk-sticky>
+      <header data-uk-sticky="show-on-up: true; animation: uk-animation-slide-top;">
         <nav className="uk-navbar-container uk-margin uk-navbar-transparent" id="main-navbar" data-uk-navbar="mode: click">
           <div className="uk-navbar-left">
             <a className="uk-navbar-item uk-logo" href="#top" data-uk-scroll>
@@ -27,25 +27,19 @@ class Header extends React.Component {
                 height: 80,
                 marginTop: -20
               }}/>
-              <div className="wt cap uk-visible@m">Anthony Mejia</div>
+              <div className="wt cap uk-visible@m text-split lato">Anthony Mejia</div>
             </a>
           </div>
           <div className="uk-navbar-right uk-visible@m">
-            <ul className="uk-navbar-nav" data-uk-scrollspy-nav="overflow: false; cls: uk-animation-fade uk-active;closest: li; scroll: true; offset: 60">
+            <ul className="uk-navbar-nav">
               <li className="navlink">
                 <a href="#about">About</a>
-              </li>
-              <li className="navlink">
-                <a href="#skills">Skills</a>
               </li>
               <li className="navlink">
                 <a href="#projects">Projects</a>
               </li>
               <li className="navlink">
                 <a href="#resume">Resume</a>
-              </li>
-              <li className="navlink">
-                <a href="#contact">Contact</a>
               </li>
             </ul>
           </div>

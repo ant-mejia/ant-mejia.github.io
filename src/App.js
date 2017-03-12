@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-import {BrowserRouter, Match, Miss} from 'react-router';
-import logo from './logo.svg';
-// import './external/uikit.min.css'
+import {BrowserRouter, Route, Switch, Link} from 'react-router-dom'
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './view/Home';
@@ -50,8 +48,11 @@ class App extends Component {
         <div className="body">
           <Header/>
           <div className="main-wrapper">
-            <Match exactly pattern="/" component={() => <Home profile={this.state.profile} projects={this.state.projects} skills={this.state.skills} resume={this.state.resume}/>}/>
-            <Miss component={NotFound}/>
+            <Switch>
+              <Route exact path="/" component={() => <Home profile={this.state.profile} projects={this.state.projects} skills={this.state.skills} resume={this.state.resume}/>}/>
+              <Route path="/project/:id"/>
+              <Route component={NotFound}/>
+            </Switch>
           </div>
           <Footer/>
         </div>

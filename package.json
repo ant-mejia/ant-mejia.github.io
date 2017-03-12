@@ -3,12 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-scripts": "0.9.3"
+    "coffee-loader": "^0.7.3",
+    "react-scripts": "0.9.3",
+    "webpack-load-plugins": "^0.1.2"
   },
   "dependencies": {
+    "axios": "^0.15.3",
+    "coffee-script": "^1.12.4",
+    "fullpage-react": "^2.0.2",
     "jquery": "^3.1.1",
+    "re-base": "^2.6.0",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "react-html-parser": "^1.0.3",
+    "react-parallax": "^1.2.6",
+    "react-router": "^4.0.0-beta.7",
+    "react-router-dom": "^4.0.0-beta.7",
+    "react-simple-parallax": "^0.2.6",
+    "react-svg": "^2.1.19",
+    "recharts": "^0.21.2"
   },
   "scripts": {
     "start": "react-scripts start",
