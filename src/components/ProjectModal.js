@@ -1,4 +1,5 @@
 import React from 'react';
+import FullPanel from './FullPanel';
 import ReactHtmlParser from 'react-html-parser';
 
 class ProjectModal extends React.Component {
@@ -33,18 +34,9 @@ class ProjectModal extends React.Component {
                   {ReactHtmlParser(this.props.project.description)}
                 </div>
                 <img className="uk-margin-large" src="https://placehold.it/2000x880" alt=""/>
-                <div className="uk-grid-collapse uk-grid-match uk-child-width-expand@m uk-text-center" data-uk-grid data-uk-height-viewport>
-                  <div>
-                    <div className="grey-gradient uk-light uk-flex uk-flex-middle uk-flex-center uk-flex-column">
-                      <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-e50c1.appspot.com/o/projects%2Fdrop%2Fdrop.png?alt=media&token=06e0c873-938b-4a8d-ae44-fe3c02f6ecae" alt=""/>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="uk-flex uk-flex-middle uk-flex-center uk-flex-column">
-                      <h1>Title of Something</h1>
-                    </div>
-                  </div>
-                </div>
+                <FullPanel reverse={false}/>
+                <FullPanel reverse={true}/>
+                <FullPanel reverse={false}/>
               </div>
             </div>
           </div>
