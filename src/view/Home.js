@@ -14,11 +14,11 @@ class Home extends React.Component {
       <div id="top">
         <Jumbotron profile={this.props.profile}/>
         <div id="section-wrapper">
-          <About profile={this.props.profile}/>
-          <Skills skills={this.props.skills} projects={this.props.projects}/>
+          <About about={this.props.about} profile={this.props.profile}/>
+          <Skills data={this.props.skillsData} skills={this.props.skills} projects={this.props.projects}/>
           <Projects projects={this.props.projects}/>
           <Resume profile={this.props.profile} resume={this.props.resume}/>
-          <Contact profile={this.props.profile}/>
+          <Contact profile={this.props.profile} contact={this.props.contact}/>
         </div>
       </div>
     );

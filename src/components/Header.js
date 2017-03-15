@@ -15,6 +15,12 @@ class Header extends React.Component {
     });
   }
 
+  toggleMobileNav = (e) => {
+    e.preventDefault();
+    $(this.refs.burger).toggleClass('active');
+    $('#main-navbar').parent().toggleClass('active');
+  }
+
   //data-uk-scrollspy-nav="overflow: false; cls: uk-animation-fade uk-active;closest: li; scroll: true; offset: 60"
   render() {
     return (
@@ -31,7 +37,7 @@ class Header extends React.Component {
             </a>
           </div>
           <div className="uk-navbar-right uk-visible@m">
-            <ul className="uk-navbar-nav">
+            <ul className="uk-navbar-nav" data-uk-scrollspy-nav="closest: li a; scroll: true">
               <li className="navlink">
                 <a href="#about">About</a>
               </li>
@@ -44,14 +50,12 @@ class Header extends React.Component {
             </ul>
           </div>
           <MobileNav/>
-          <div className="uk-navbar-right uk-hidden@m">
-            <a className="" href="#">
-              <div className="hamburger">
-                <span className="hamburger-box">
-                  <span className="hamburger-inner"></span>
-                </span>
-              </div>
-            </a>
+          <div id="hamburger" className="uk-navbar-right uk-hidden@m" onClick={(e) => this.toggleMobileNav(e)}>
+            <div className="hamburger" ref="burger">
+              <span className="hamburger-box">
+                <span className="hamburger-inner"></span>
+              </span>
+            </div>
           </div>
         </nav>
       </header>

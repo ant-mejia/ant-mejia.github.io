@@ -4,6 +4,20 @@ import ReactHtmlParser from 'react-html-parser';
 
 class ProjectModal extends React.Component {
 
+  renderPanels = () => {
+    if (this.props.project.panels) {
+      return (this.props.project.panels.map((item, index) => {
+        if (item.image) {
+          return <FullPanel key={index} text={item.text} image={item.image} reverse={index % 2 !== 0}/>
+        } else if (item.icon) {
+          return <FullPanel key={index} text={item.text} icon={item.icon} reverse={index % 2 !== 0}/>
+        } else {
+          return <FullPanel key={index} text={item.text} icon="focus" reverse={index % 2 !== 0}/>
+        }
+      }))
+    };
+  }
+
   render() {
     let background = this.props.project.images.background
       ? this.props.project.images.background
@@ -11,7 +25,7 @@ class ProjectModal extends React.Component {
     return (
       <div id={this.props.target} className="uk-modal-full project-modal" data-uk-modal>
         <div className="uk-modal-dialog">
-          <button className="uk-modal-close-full highhh" type="button" data-uk-close></button>
+          <button className="uk-modal-close-full" type="button" data-uk-close></button>
           <div className="uk-flex-middle">
             <div>
               <div className="uk-cover-container uk-margin-medium-bottom" data-uk-height-viewport>
@@ -30,13 +44,15 @@ class ProjectModal extends React.Component {
                     </div>
                   </div>
                   <h1 className="modal-title">{this.props.project.title}</h1>
-                  <h2>{this.props.project.tagline}</h2>
+                  <h2 className="uk-text-capitalize text-split uk-margin-large-bottom">{this.props.project.tagline}</h2>
                   {ReactHtmlParser(this.props.project.description)}
                 </div>
-                <img className="uk-margin-large" src="https://placehold.it/2000x880" alt=""/>
-                <FullPanel reverse={false}/>
-                <FullPanel reverse={true}/>
-                <FullPanel reverse={false}/>
+                <img className="uk-margin-large" src={this.props.project.images.alt
+                  ? this.props.project.images.alt
+                  : "http://placehold.it/1440x900"} alt=""/>
+                <div>
+                  {this.renderPanels()}
+                </div>
               </div>
             </div>
           </div>
@@ -44,7 +60,6 @@ class ProjectModal extends React.Component {
       </div>
     );
   }
-
 }
 
 export default ProjectModal;

@@ -17,28 +17,44 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      about: {},
       profile: {},
       projects: {},
-      skills: {},
-      resume: {}
+      skills: [],
+      skillsData: [],
+      resume: {},
+      contact: {}
     };
   }
   componentDidMount() {
     base.syncState(`profile`, {
       context: this,
       state: 'profile'
-    })
+    });
+    base.syncState(`about`, {
+      context: this,
+      state: 'about'
+    });
     base.syncState(`projects`, {
       context: this,
       state: 'projects'
     });
-    base.syncState(`skills`, {
+    base.syncState(`skills/panels`, {
       context: this,
       state: 'skills'
+    });
+    base.syncState(`skills/data`, {
+      context: this,
+      state: 'skillsData',
+      asArray: true
     });
     base.syncState(`resume`, {
       context: this,
       state: 'resume'
+    });
+    base.syncState(`contact`, {
+      context: this,
+      state: 'contact'
     });
   }
 
@@ -49,7 +65,7 @@ class App extends Component {
           <Header/>
           <div className="main-wrapper">
             <Switch>
-              <Route exact path="/" component={() => <Home profile={this.state.profile} projects={this.state.projects} skills={this.state.skills} resume={this.state.resume}/>}/>
+              <Route exact path="/" component={() => <Home profile={this.state.profile} projects={this.state.projects} skillsData={this.state.skillsData} skills={this.state.skills} resume={this.state.resume} contact={this.state.contact} about={this.state.about}/>}/>
               <Route path="/project/:id"/>
               <Route component={NotFound}/>
             </Switch>

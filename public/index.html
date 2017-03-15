@@ -23,16 +23,6 @@
       } else {
         click = 'click';
       }
-      $('.hamburger').click(function(e) {
-        e.preventDefault();
-        $(this).toggleClass('active');
-        $('#main-navbar').parent().toggleClass('active');
-      });
-      $('div.menu ul li a').on(click, function(e) {
-        e.preventDefault();
-        $('.hamburger').toggleClass('active');
-        $('#main-navbar').parent().toggleClass('active');
-      });
     });
   </script>
 </body>
