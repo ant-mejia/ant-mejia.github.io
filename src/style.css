@@ -13,8 +13,14 @@ html body nav.uk-navbar-container .hamburger-inner, html body nav.uk-navbar-cont
   transition-duration: 0.15s;
   transition-timing-function: ease; }
 
+html body .lato {
+  font-family: "Lato", sans-serif; }
+html body .dosis {
+  font-family: "Dosis", sans-serif; }
 html body .medium-text {
   font-size: 20px; }
+html body .maxh-100 {
+  max-height: 100vh; }
 html body .icon {
   color: #505a67; }
   html body .icon.main-icon {
@@ -72,8 +78,6 @@ html body .uk-modal-close-full {
     stroke: #fff !important; }
   html body .uk-modal-close-full:hover {
     background: rgba(0, 0, 0, 0.21); }
-html body .lato {
-  font-family: "Lato", sans-serif; }
 html body .text-split {
   letter-spacing: 4px; }
 html body .body {
@@ -122,15 +126,14 @@ html body .body {
 html body .main-wrapper {
   flex: 1; }
 html body .wt {
-  color: white;
-  /* font-family: 'Raleway', sans-serif; */
-  font-weight: 200; }
+  color: white; }
 html body .cap {
   text-transform: uppercase; }
-html body #main-jumbo {
-  background: url("../public/assets/img/skyline.jpg");
-  background-size: cover;
-  background-attachment: fixed; }
+html body #main-jumbo .jumbo-gradient {
+  background: linear-gradient(135deg, rgba(4, 118, 200, 0.9), rgba(143, 28, 172, 0.9)); }
+html body #main-jumbo .image-container {
+  background: url("https://firebasestorage.googleapis.com/v0/b/portfolio-e50c1.appspot.com/o/main-background.jpg?alt=media&token=3ff951b8-2519-48e8-aedc-b347078e2623");
+  background-size: cover; }
 html body nav.uk-navbar-container {
   margin-bottom: -100%;
   transition: all 0.3s ease-out;
@@ -144,17 +147,27 @@ html body nav.uk-navbar-container {
       html body nav.uk-navbar-container a.uk-navbar-item.uk-logo svg.svg-logo path {
         fill: #000;
         transition: all 0.3s ease-out; }
+  html body nav.uk-navbar-container .uk-navbar-right .uk-navbar-nav .navlink {
+    margin-right: 10px; }
+    html body nav.uk-navbar-container .uk-navbar-right .uk-navbar-nav .navlink a {
+      padding: 10px 30px;
+      letter-spacing: 4px;
+      font-family: "Lato", sans-serif; }
   html body nav.uk-navbar-container.uk-navbar-opaque {
     background-color: white; }
     html body nav.uk-navbar-container.uk-navbar-opaque a.uk-navbar-item.uk-logo .wt {
       color: #000;
       transition: all 0.3s ease-out; }
+    html body nav.uk-navbar-container.uk-navbar-opaque .uk-navbar-right .uk-navbar-nav .navlink:hover a {
+      color: #000; }
+    html body nav.uk-navbar-container.uk-navbar-opaque .uk-navbar-right .uk-navbar-nav .navlink a {
+      color: rgba(0, 0, 0, 0.8); }
   html body nav.uk-navbar-container.uk-navbar-transparent a.uk-navbar-item.uk-logo svg.svg-logo path {
     fill: #fff; }
   html body nav.uk-navbar-container.uk-navbar-transparent .uk-navbar-right .uk-navbar-nav .navlink a {
-    color: rgba(255, 255, 255, 0.6); }
-  html body nav.uk-navbar-container.uk-navbar-transparent .uk-navbar-right .uk-navbar-nav .navlink.uk-active a, html body nav.uk-navbar-container.uk-navbar-transparent .uk-navbar-right .uk-navbar-nav .navlink:hover a {
     color: rgba(255, 255, 255, 0.8); }
+  html body nav.uk-navbar-container.uk-navbar-transparent .uk-navbar-right .uk-navbar-nav .navlink.uk-active a, html body nav.uk-navbar-container.uk-navbar-transparent .uk-navbar-right .uk-navbar-nav .navlink:hover a {
+    color: white; }
   html body nav.uk-navbar-container.uk-navbar-transparent .hamburger-inner,
   html body nav.uk-navbar-container.uk-navbar-transparent .hamburger-inner::after,
   html body nav.uk-navbar-container.uk-navbar-transparent .hamburger-inner::before {
@@ -174,8 +187,6 @@ html body nav.uk-navbar-container {
     margin: 0;
     overflow: visible;
     z-index: 100; }
-    html body nav.uk-navbar-container .hamburger:hover {
-      opacity: 0.7; }
     html body nav.uk-navbar-container .hamburger .hamburger-inner {
       transition-duration: 0.1s;
       transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }

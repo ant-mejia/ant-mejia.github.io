@@ -2,7 +2,7 @@ import React from 'react';
 import ReactSVG from 'react-svg'
 import $ from 'jquery';
 import MobileNav from '../partial/MobileNav';
-import logo from '../a.svg'
+import logo from '../assets/svg/a.svg'
 
 class Header extends React.Component {
   componentDidMount() {
@@ -36,7 +36,7 @@ class Header extends React.Component {
               <div className="wt cap uk-visible@m text-split lato">Anthony Mejia</div>
             </a>
           </div>
-          <div className="uk-navbar-right uk-visible@m">
+          <div className="uk-navbar-right uk-animation-fade uk-visible@m">
             <ul className="uk-navbar-nav" data-uk-scrollspy-nav="closest: li a; scroll: true">
               <li className="navlink">
                 <a href="#about">About</a>

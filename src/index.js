@@ -5,7 +5,6 @@ import $ from 'jquery'
 import './style.css';
 
 $(document).ready(function() {
-  console.log('a');
   ReactDOM.render(
     <App/>, document.getElementById('root'));
 });

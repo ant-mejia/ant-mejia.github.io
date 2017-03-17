@@ -4,7 +4,7 @@ class Footer extends React.Component {
 
   render() {
     return (
-      <footer className="uk-container uk-height-medium ">
+      <footer className="uk-container uk-height-medium uk-margin-xlarge-top">
         <hr/>
         <div className="uk-text-center">Copyright (c) 2017 Anthony Mejia All Rights Reserved.</div>
       </footer>

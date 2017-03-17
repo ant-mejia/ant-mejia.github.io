@@ -55,7 +55,7 @@ class Skills extends React.Component {
   }
 
   render() {
-    let min = [].slice.call(this.props.data).sort((a, b) => a - b)[0] - 5;
+    let min = [].slice.call(this.props.data).sort((a, b) => a - b)[0] - 15;
     let height = $(window).width() < 875
       ? '40%'
       : '25%';

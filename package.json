@@ -2,6 +2,7 @@
   "name": "react-portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ant-mejia.github.io/ant-mejia.github.io",
   "devDependencies": {
     "coffee-loader": "^0.7.3",
     "react-scripts": "0.9.3",
