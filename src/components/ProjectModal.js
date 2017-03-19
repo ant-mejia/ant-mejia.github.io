@@ -49,7 +49,7 @@ class ProjectModal extends React.Component {
                 </div>
                 <img className="uk-margin-large" src={this.props.project.images.alt
                   ? this.props.project.images.alt
-                  : "http://placehold.it/1440x900"} alt=""/>
+                  : "https://placehold.it/1440x900"} alt=""/>
                 <div>
                   {this.renderPanels()}
                 </div>
