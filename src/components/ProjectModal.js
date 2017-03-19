@@ -21,7 +21,7 @@ class ProjectModal extends React.Component {
   render() {
     let background = this.props.project.images.background
       ? this.props.project.images.background
-      : "http://placehold.it/1440x900";
+      : "https://placehold.it/1440x900";
     return (
       <div id={this.props.target} className="uk-modal-full project-modal" data-uk-modal>
         <div className="uk-modal-dialog">

@@ -2,7 +2,7 @@
   "name": "react-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ant-mejia.github.io/ant-mejia.github.io",
+  "homepage": "https://ant-mejia.github.io",
   "devDependencies": {
     "coffee-loader": "^0.7.3",
     "react-scripts": "0.9.3",
@@ -28,6 +28,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "deploy" : "npm run build&&gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

@@ -37,7 +37,7 @@ class Header extends React.Component {
             </a>
           </div>
           <div className="uk-navbar-right uk-animation-fade uk-visible@m">
-            <ul className="uk-navbar-nav" data-uk-scrollspy-nav="closest: li a; scroll: true">
+            <ul className="uk-navbar-nav" data-uk-scrollspy-nav="closest: li; scroll: true">
               <li className="navlink">
                 <a href="#about">About</a>
               </li>

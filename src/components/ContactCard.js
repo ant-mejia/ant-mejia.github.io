@@ -4,7 +4,7 @@ class ContactCard extends React.Component {
 
   render() {
     return (
-      <div className="uk-text-center uk-padding-large">
+      <div className="contact-card uk-text-center uk-padding-large">
         <a href={this.props.link} target="_blank">
           <div className="uk-inline-clip uk-transition-toggle">
             <div className="uk-padding-small">

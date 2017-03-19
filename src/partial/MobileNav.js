@@ -13,7 +13,7 @@ class MobileNav extends React.Component {
       <div className="mobile-nav uk-hidden@m">
         <div className="circle"></div>
         <div className="menu uk-width-1-1" data-uk-height-viewport>
-          <ul data-uk-scrollspy-nav="cls: uk-animation-fade uk-active;closest: li; scroll: true;">
+          <ul data-uk-scrollspy-nav="cls: uk-active;closest: li; scroll: true;">
             <li className="navlink">
               <a className="uk-link-muted" onClick={(e) => this.handleClick(e)} href="#about">About</a>
             </li>

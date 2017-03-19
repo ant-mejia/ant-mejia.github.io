@@ -15,7 +15,7 @@ class Contact extends React.Component {
         <div>
           <h2 className="lato cap text-split uk-margin-xlarge-bottom">{this.props.contact.tagline}</h2>
           <div>
-            <div className="uk-grid-collapse uk-child-width-1-3 uk-text-center uk-grid-divider" data-uk-grid>
+            <div className="uk-grid-collapse uk-child-width-1-2@s uk-child-width-1-3@m uk-text-center uk-grid-divider" data-uk-grid>
               <ContactCard text={this.props.profile.email} alt="Email Address" link={`mailto:${this.props.profile.email}`}/>
               <ContactCard text={this.socialMedia('github')} alt="Github" link={`https://github.com/${this.socialMedia('github')}`}/>
               <ContactCard text={`/in/${this.socialMedia('linkedin')}`} alt="LinkedIn" link={`https://linkedin.com/in/${this.socialMedia('linkedin')}`}/>

@@ -107,6 +107,9 @@ html body .body {
     font-family: "Dosis", sans-serif; }
     html body .body section#skills .highcharts-tooltip .tooltip-header {
       font-size: 20px; }
+  html body .body section#projects.project-container {
+    float: left;
+    margin-bottom: 120px; }
   html body .body section#projects .project-wrapper .uk-padding-small {
     background: linear-gradient(#e9e9e9, #f6f6f6); }
   html body .body section#projects .project-wrapper:hover .project-tagline,
@@ -123,6 +126,17 @@ html body .body {
     margin-left: -70px;
     padding-right: 70px;
     opacity: 0; }
+  html body .body section#contact .contact-card .uk-inline-clip::before {
+    content: '';
+    display: block;
+    background: linear-gradient(45deg, #24C6DC, #514A9D);
+    height: 2px;
+    width: 0;
+    transition: all 0.3s linear;
+    position: absolute;
+    top: 0; }
+  html body .body section#contact .contact-card:hover .uk-inline-clip::before {
+    width: 100px; }
 html body .main-wrapper {
   flex: 1; }
 html body .wt {
@@ -135,6 +149,7 @@ html body #main-jumbo .image-container {
   background: url("https://firebasestorage.googleapis.com/v0/b/portfolio-e50c1.appspot.com/o/main-background.jpg?alt=media&token=3ff951b8-2519-48e8-aedc-b347078e2623");
   background-size: cover; }
 html body nav.uk-navbar-container {
+  z-index: 10;
   margin-bottom: -100%;
   transition: all 0.3s ease-out;
   font-family: "Lato", sans-serif; }

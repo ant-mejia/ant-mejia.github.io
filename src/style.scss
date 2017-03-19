@@ -8,6 +8,7 @@ $white: white;
 $black: #000;
 $color_desert_storm_approx: #f8f8f8;
 $color_havelock_blue_approx: #4a89dc; //urls
+$blue-gradient: linear-gradient(45deg, #24C6DC, #514A9D);
 $grey: #505a67;
 $skyline: url("https://firebasestorage.googleapis.com/v0/b/portfolio-e50c1.appspot.com/o/main-background.jpg?alt=media&token=3ff951b8-2519-48e8-aedc-b347078e2623");
 $lato: 'Lato', sans-serif;
@@ -198,6 +199,11 @@ html {
         }
 
         &#projects {
+          &.project-container {
+            float        : left;
+            margin-bottom: 120px;
+          }
+
           .project-wrapper {
             .uk-padding-small {
               background: linear-gradient(#e9e9e9, #f6f6f6);
@@ -223,6 +229,27 @@ html {
               margin-left  : -70px;
               padding-right: 70px;
               opacity      : 0;
+            }
+          }
+        }
+
+        &#contact {
+          .contact-card {
+            .uk-inline-clip::before {
+              content   : '';
+              display   : block;
+              background: $blue-gradient;
+              height    : 2px;
+              width     : 0;
+              transition: all 0.3s linear;
+              position  : absolute;
+              top       : 0;
+            }
+
+            &:hover {
+              .uk-inline-clip::before {
+                width: 100px;
+              }
             }
           }
         }
@@ -253,6 +280,7 @@ html {
     }
 
     nav.uk-navbar-container {
+      z-index      : 10;
       margin-bottom: -100%;
       transition   : $smooth-out;
       font-family  : $lato;
