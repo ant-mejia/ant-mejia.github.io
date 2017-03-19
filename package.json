@@ -19,6 +19,7 @@
     "react-dom": "^15.4.2",
     "react-highcharts": "^11.5.0",
     "react-html-parser": "^1.0.3",
+    "react-lazy-load": "^3.0.11",
     "react-parallax": "^1.2.6",
     "react-router": "^4.0.0-beta.7",
     "react-router-dom": "^4.0.0-beta.7",
@@ -28,7 +29,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "deploy" : "npm run build&&gh-pages -d build",
+    "deploy": "npm run build&&gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
