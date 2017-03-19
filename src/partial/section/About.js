@@ -15,7 +15,7 @@ class About extends React.Component {
     return (
       <section id="about" className="uk-padding-large" data-uk-height-viewport>
         <h1 className="uk-text-center uk-text-left@m section-title">{this.props.profile.firstName} {this.props.profile.lastName}</h1>
-        <p className="lato uk-margin-xlarge medium-text summary">{this.props.profile.summary}</p>
+        <p className="lato uk-margin-xlarge uk-text-justify medium-text summary">{this.props.profile.summary}</p>
         <div className="uk-child-width-1-3@s uk-margin-xlarge-bottom" data-uk-grid>
           {this.renderPanels()}
         </div>

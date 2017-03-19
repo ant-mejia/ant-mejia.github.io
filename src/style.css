@@ -107,7 +107,7 @@ html body .body {
     font-family: "Dosis", sans-serif; }
     html body .body section#skills .highcharts-tooltip .tooltip-header {
       font-size: 20px; }
-  html body .body section#projects.project-container {
+  html body .body section#projects .project-container {
     float: left;
     margin-bottom: 120px; }
   html body .body section#projects .project-wrapper .uk-padding-small {
