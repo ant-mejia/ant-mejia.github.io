@@ -18,7 +18,7 @@ class FullPanel extends React.Component {
         <div className="full-panel uk-grid-collapse uk-grid-match uk-child-width-expand@m uk-margin-large-bottom uk-text-center" data-uk-grid data-uk-height-viewport>
           <div>
             <div className="uk-flex uk-flex-middle uk-flex-center uk-flex-column">
-              <h1>{this.props.text}</h1>
+              <h1 className="lato cap text-split">{this.props.text}</h1>
             </div>
           </div>
           <div>
@@ -38,7 +38,7 @@ class FullPanel extends React.Component {
         </div>
         <div>
           <div className="uk-flex uk-flex-middle uk-flex-center uk-flex-column">
-            <h1>{this.props.text}</h1>
+            <h1 className="lato cap text-split">{this.props.text}</h1>
           </div>
         </div>
       </div>

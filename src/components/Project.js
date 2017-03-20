@@ -17,7 +17,7 @@ class Project extends React.Component {
               </div>
               <div className="uk-transition-fade uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle">
                 <div className="uk-text-left uk-width-1-1">
-                  <h1 className="project-title cap lato">{this.props.title}</h1>
+                  <h1 className="project-title cap lato uk-margin-small-bottom">{this.props.title}</h1>
                   <p className="project-tagline lato uk-h4">{this.props.tagline}</p>
                 </div>
               </div>

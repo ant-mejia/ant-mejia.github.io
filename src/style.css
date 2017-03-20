@@ -126,6 +126,11 @@ html body .body {
     margin-left: -70px;
     padding-right: 70px;
     opacity: 0; }
+  @media (max-width: 760px) {
+    html body .body section#projects .project-wrapper .project-tagline,
+    html body .body section#projects .project-wrapper .project-title {
+      margin-top: 0;
+      margin-bottom: 0; } }
   html body .body section#contact .contact-card .uk-inline-clip::before {
     content: '';
     display: block;
@@ -278,6 +283,10 @@ html body header.active nav.uk-navbar-container .circle {
   top: -560px;
   right: -565px;
   transition: all 800ms cubic-bezier(0, 0.995, 0.99, 1); }
+  @media screen and (orientation: landscape) {
+    html body header.active nav.uk-navbar-container .circle {
+      width: 355vh;
+      height: 355vh; } }
 html body header.active nav.uk-navbar-container .menu {
   top: 0;
   display: flex;
