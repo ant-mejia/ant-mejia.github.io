@@ -133,7 +133,7 @@ class Skills extends React.Component {
       },
       series: [
         {
-          name: 'John',
+          name: 'Level',
           data: this.props.data,
           marker: {
             symbol: 'circle'
