@@ -33,6 +33,27 @@ html body .icon {
     -webkit-text-fill-color: transparent; }
 html body .grey {
   color: #505a67; }
+html body .line-button {
+  text-align: center;
+  transition: color 0.3s linear;
+  color: #000; }
+  html body .line-button::after {
+    transition: width 0.3s linear 0.3s, height 0.3s linear, margin-top 0.3s linear;
+    content: '';
+    display: block;
+    height: 1px;
+    width: 40%;
+    background: #000;
+    margin: 5px auto; }
+  html body .line-button:hover {
+    transition: color 0.5s linear 0.3s;
+    text-decoration: none;
+    color: #b3b3b3; }
+    html body .line-button:hover::after {
+      transition: width 0.3s linear, height 0.5s linear 0.3s, margin-top 0.5s linear 0.3s;
+      margin-top: -34px;
+      height: 40px;
+      width: 100%; }
 html body ::selection {
   background: #000;
   color: #bbbbbb; }
@@ -53,8 +74,7 @@ html body .project-modal .project-heading .project-meta {
     letter-spacing: 4px;
     font-family: "Dosis", sans-serif; }
   html body .project-modal .project-heading .project-meta p {
-    font-family: "Lato", sans-serif;
-    word-break: break-all; }
+    font-family: "Lato", sans-serif; }
 html body .project-modal .uk-grid-collapse h1,
 html body .project-modal .uk-grid-collapse h2,
 html body .project-modal .uk-grid-collapse h3 {

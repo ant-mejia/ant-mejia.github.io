@@ -8,7 +8,7 @@ class Resume extends React.Component {
     if (experience) {
       return (
         <div>
-          <h3 className="uk-heading-line uk-margin-medium-bottom">
+          <h3 className="uk-heading-line uk-margin-large-bottom">
             <span className="lato cap text-split">Experience</span>
           </h3>
           <ul className="uk-list uk-list-large uk-list-divider">
@@ -35,7 +35,7 @@ class Resume extends React.Component {
     if (education) {
       return (
         <div>
-          <h3 className="uk-heading-line uk-margin-medium">
+          <h3 className="uk-heading-line uk-margin-large-bottom">
             <span className="lato cap text-split">Education</span>
           </h3>
           <ul className="uk-list uk-list-large uk-list-divider">
@@ -64,9 +64,14 @@ class Resume extends React.Component {
         <div className="uk-padding-large">
           <h2 className="lato uk-margin-remove">{this.props.profile.firstName} {this.props.profile.lastName}</h2>
           <h3 className="lato uk-margin-remove">{this.props.resume.currentPosition}</h3>
-          <div className="experience-container uk-grid-small uk-child-width-expand@s uk-text-center uk-margin-large-top" data-uk-grid>
+          <div className="experience-container uk-grid-small uk-child-width-expand@s uk-text-center uk-margin-large-top uk-margin-large-bottom" data-uk-grid>
             {this.renderExperience()}
             {this.renderEducation()}
+          </div>
+          <div className="uk-text-center">
+            <a className="lato cap text-split uk-display-inline-block line-button" href={this.props.resume.link} target="_blank">
+              Download Resume
+            </a>
           </div>
         </div>
       </section>

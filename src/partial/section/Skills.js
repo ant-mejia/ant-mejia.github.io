@@ -159,7 +159,9 @@ class Skills extends React.Component {
     return (
       <section id="skills" className="uk-padding-large" data-uk-height-viewport>
         <h1 className="uk-text-center uk-text-left@m section-title uk-margin-xlarge-bottom">Skills</h1>
-        <ReactHighcharts config={config} ref="chart"></ReactHighcharts>
+        <ReactHighcharts config={config} domProps={{
+          className: 'uk-responsive-width'
+        }} ref="chart"></ReactHighcharts>
         <div className="uk-margin-xlarge">
           <div className="uk-hidden@m">
             {this.props.skills.map((item, index) => {

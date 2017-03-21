@@ -47,7 +47,7 @@ class ProjectModal extends React.Component {
                   <h2 className="uk-text-capitalize text-split uk-margin-large-bottom">{this.props.project.tagline}</h2>
                   {ReactHtmlParser(this.props.project.description)}
                 </div>
-                <img className="uk-margin-large" src={this.props.project.images.alt
+                <img className="uk-margin-large-top uk-margin-large-bottom uk-margin-auto uk-display-block" src={this.props.project.images.alt
                   ? this.props.project.images.alt
                   : "https://placehold.it/1440x900"} alt=""/>
                 <div>
