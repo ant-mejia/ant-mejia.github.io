@@ -4,6 +4,7 @@ import {AreaChart, Area, ResponsiveContainer, Tooltip} from 'recharts';
 import ReactHighcharts from 'react-highcharts';
 import $ from 'jquery';
 import FullPanel from '../../components/FullPanel';
+import Panel from '../../components/Panel';
 
 class Skills extends React.Component {
   constructor(props) {
@@ -159,10 +160,19 @@ class Skills extends React.Component {
       <section id="skills" className="uk-padding-large" data-uk-height-viewport>
         <h1 className="uk-text-center uk-text-left@m section-title uk-margin-xlarge-bottom">Skills</h1>
         <ReactHighcharts config={config} ref="chart"></ReactHighcharts>
-        <div>
-          {this.props.skills.map((item, index) => {
-            return <FullPanel key={index} icon={item.icon} text={item.content} reverse={index % 2 !== 0}/>
-          })}
+        <div className="uk-margin-xlarge">
+          <div className="uk-hidden@m">
+            {this.props.skills.map((item, index) => {
+              return <FullPanel key={index} icon={item.icon} text={item.content} reverse={index % 2 !== 0}/>
+            })}
+          </div>
+          <div className="uk-visible@m">
+            <div className="uk-child-width-expand@s" data-uk-grid>
+              {this.props.skills.map((item, index) => {
+                return <Panel key={index} title={item.content} icon={item.icon}/>
+              })}
+            </div>
+          </div>
         </div>
       </section>
     );

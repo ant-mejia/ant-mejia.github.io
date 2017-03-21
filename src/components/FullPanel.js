@@ -15,7 +15,7 @@ class FullPanel extends React.Component {
   render() {
     if (this.props.reverse) {
       return (
-        <div className="full-panel uk-grid-collapse uk-grid-match uk-child-width-expand@m uk-margin-large-bottom uk-text-center" data-uk-grid data-uk-height-viewport>
+        <div className="full-panel uk-grid-collapse uk-grid-match uk-child-width-expand@s uk-margin-large-bottom uk-text-center" data-uk-grid data-uk-height-viewport>
           <div>
             <div className="uk-flex uk-flex-middle uk-flex-center uk-flex-column">
               <h1 className="lato cap text-split">{this.props.text}</h1>
@@ -30,7 +30,7 @@ class FullPanel extends React.Component {
       );
     }
     return (
-      <div className="full-panel uk-grid-collapse uk-grid-match uk-child-width-expand@m uk-margin-large-bottom uk-text-center" data-uk-grid data-uk-height-viewport>
+      <div className="full-panel uk-grid-collapse uk-grid-match uk-child-width-expand@s uk-margin-large-bottom uk-text-center" data-uk-grid data-uk-height-viewport>
         <div>
           <div className="uk-light uk-flex uk-flex-middle uk-flex-center uk-flex-column">
             {this.renderType()}

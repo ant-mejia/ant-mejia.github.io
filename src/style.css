@@ -26,7 +26,6 @@ html body .icon {
   html body .icon.main-icon {
     font-size: 130px;
     text-align: center;
-    display: block;
     margin: 40px auto 80px; }
   html body .icon.blue-gradient {
     background: -webkit-linear-gradient(45deg, #24C6DC, #514A9D);
