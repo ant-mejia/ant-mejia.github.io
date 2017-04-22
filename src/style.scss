@@ -51,6 +51,26 @@ html {
       max-height: 100vh;
     }
 
+    .main-wrapper {
+      flex: 1;
+    }
+
+    .wt {
+      color: $white;
+    }
+
+    .cap {
+      text-transform: uppercase;
+    }
+
+    .text-split {
+      letter-spacing: 4px;
+    }
+
+    .grey {
+      color: $grey;
+    }
+
     .icon {
       color: $grey;
 
@@ -67,10 +87,6 @@ html {
       }
     }
 
-    .grey {
-      color: $grey;
-    }
-
     .line-button {
       text-align: center;
       transition: color 0.3s linear;
@@ -84,6 +100,7 @@ html {
         width     : 40%;
         background: $black;
         margin    : 5px auto;
+        z-index   : -1;
       }
 
       &:hover {
@@ -147,6 +164,30 @@ html {
           font-family   : $lato;
         }
       }
+
+      .outbound {
+        transition: color 0.3s linear;
+        display   : inline-block;
+
+        &::before {
+          content   : '';
+          display   : block;
+          width     : 15%;
+          height    : 1px;
+          background: #666;
+          margin    : 0 auto 10px;
+          transition: all 0.3s linear;
+        }
+
+        &:hover {
+          color: $black!important;
+
+          &::before {
+            width     : 100%;
+            background: $black;
+          }
+        }
+      }
     }
 
     .grey-gradient {
@@ -173,10 +214,6 @@ html {
       &:hover {
         background: rgba(0, 0, 0, 0.21);
       }
-    }
-
-    .text-split {
-      letter-spacing: 4px;
     }
 
     .body {
@@ -289,18 +326,6 @@ html {
           }
         }
       }
-    }
-
-    .main-wrapper {
-      flex: 1;
-    }
-
-    .wt {
-      color: $white;
-    }
-
-    .cap {
-      text-transform: uppercase;
     }
 
     #main-jumbo {

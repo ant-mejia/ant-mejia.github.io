@@ -17,7 +17,7 @@ class Home extends React.Component {
           <About about={this.props.about} profile={this.props.profile}/>
           <Skills data={this.props.skillsData} skills={this.props.skills} projects={this.props.projects}/>
           <Projects projects={this.props.projects}/>
-          <Resume profile={this.props.profile} resume={this.props.resume}/>
+          <Resume profile={this.props.profile} resume={this.props.resume} storage={this.props.storage}/>
           <Contact profile={this.props.profile} contact={this.props.contact}/>
         </div>
       </div>

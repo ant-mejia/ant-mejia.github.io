@@ -53,6 +53,9 @@ class ProjectModal extends React.Component {
                 <div>
                   {this.renderPanels()}
                 </div>
+                <div className="uk-text-center">
+                  <a className="uk-link-reset outbound lato cap text-split uk-text-center uk-align-center uk-margin-large-top medium-text" target="_blank" href={this.props.project.link}>View Website</a>
+                </div>
               </div>
             </div>
           </div>

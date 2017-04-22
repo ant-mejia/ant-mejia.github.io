@@ -64,7 +64,7 @@ class Resume extends React.Component {
         <div className="uk-padding-large">
           <h2 className="lato uk-margin-remove">{this.props.profile.firstName} {this.props.profile.lastName}</h2>
           <h3 className="lato uk-margin-remove">{this.props.resume.currentPosition}</h3>
-          <div className="experience-container uk-grid-small uk-child-width-expand@s uk-text-center uk-margin-large-top uk-margin-large-bottom" data-uk-grid>
+          <div className="experience-container uk-grid-large uk-child-width-expand@s uk-text-center uk-margin-large-top uk-margin-large-bottom" data-uk-grid>
             {this.renderExperience()}
             {this.renderEducation()}
           </div>

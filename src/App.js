@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import Home from './view/Home';
 import NotFound from './view/NotFound';
 import Rebase from 're-base';
-var base = Rebase.createClass({
+let base = Rebase.createClass({
   apiKey: "AIzaSyDCPU99j4L15R1QHb4s5xwujDRBPzlJGew",
   authDomain: "portfolio-e50c1.firebaseapp.com",
   databaseURL: "https://portfolio-e50c1.firebaseio.com",
@@ -27,32 +27,32 @@ class App extends Component {
     };
   }
   componentDidMount() {
-    base.syncState(`profile`, {
+    base.bindToState(`profile`, {
       context: this,
       state: 'profile'
     });
-    base.syncState(`about`, {
+    base.bindToState(`about`, {
       context: this,
       state: 'about'
     });
-    base.syncState(`projects`, {
+    base.bindToState(`projects`, {
       context: this,
       state: 'projects'
     });
-    base.syncState(`skills/panels`, {
+    base.bindToState(`skills/panels`, {
       context: this,
       state: 'skills'
     });
-    base.syncState(`skills/data`, {
+    base.bindToState(`skills/data`, {
       context: this,
       state: 'skillsData',
       asArray: true
     });
-    base.syncState(`resume`, {
+    base.bindToState(`resume`, {
       context: this,
       state: 'resume'
     });
-    base.syncState(`contact`, {
+    base.bindToState(`contact`, {
       context: this,
       state: 'contact'
     });
